@@ -1,0 +1,12 @@
+CREATE DATABASE aula;
+
+USE aula;
+
+CREATE TABLE categoria (
+codcategoria INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+nomecategoria VARCHAR(100) NOT NULL
+);
+
+insert into categoria (nomecategoria) values ('Aparelho de Som');
+insert into categoria (nomecategoria) values ('Mobiles');
+insert into categoria (nomecategoria) values ('Periféricos');

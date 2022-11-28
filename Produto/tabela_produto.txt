@@ -1,0 +1,17 @@
+CREATE DATABASE aula;
+
+USE aula;
+
+CREATE TABLE produto (
+codproduto INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+nomeprod VARCHAR(50) NOT NULL,
+descprod VARCHAR(100) NOT NULL,
+categoriacod int(10) UNSIGNED NOT NULL,
+CONSTRAINT fk_produto_categ FOREIGN KEY (categoriacod) REFERENCES categoria (codcategoria)
+);
+
+insert into produto (nomeprod,descprod,categoriacod) values ('Smartphone','Um smartphone é um celular que combina recursos de computadores pessoais.',2);
+insert into produto (nomeprod,descprod,categoriacod) values ('Mouse','Parte que permite interagir com os objetos que aparecem na tela',3);
+insert into produto (nomeprod,descprod,categoriacod) values ('Teclado','Fornece uma série de atalhos para diversas funções, facilitando a realização das tarefas.',3);
+insert into produto (nomeprod,descprod,categoriacod) values ('Headset','Dispositivo de audio projetado para facilitar a comunicação entre as partes.',1);
+insert into produto (nomeprod,descprod,categoriacod) values ('Monitor','Transmitir o que está sendo realizado no computador',3);
